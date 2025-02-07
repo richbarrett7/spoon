@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoon Cereals</title>
+
+    <link id="stylesheet" rel="stylesheet" href="assets/css/dist/build.css">
+    <script>
+        const stylesheet = document.getElementById('stylesheet');
+        // add a random query string to the stylesheet to force a reload
+        stylesheet.href = stylesheet.href + '?v=' + Date.now();
+    </script>
+
+</head>
+
+<body>
+    <header>
+
+
+        <div class="container mx-auto p-4 flex justify-between items-center my-5">
+            <div class="text-lg font-bold">
+                <a href="index.html">
+                    <img src="assets/img/logo.png" alt="Spoon Cereals" class="h-24">
+                </a>
+            </div>
+            <nav class="hidden md:flex space-x-6 font-futura text-2xl">
+                <a href="https://www.amazon.co.uk/stores/SpoonCereals/page/B0096582-0CF7-4236-933F-EF68FB9410D4?ref_=ast_bln"
+                    class="text-gray-700 hover:text-spoon-green">Shop</a>
+                <a href="about.html" class="text-gray-700 hover:text-spoon-green">About</a>
+                <a href="recipes.html" class="text-gray-700 hover:text-spoon-green">Recipes</a>
+                <a href="planet.html" class="text-gray-700 hover:text-spoon-green">Planet</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="https://www.amazon.co.uk/stores/SpoonCereals/page/B0096582-0CF7-4236-933F-EF68FB9410D4?ref_=ast_bln"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Shop</a>
+            <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">About</a>
+            <a href="recipes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Recipes</a>
+            <a href="planet.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Planet</a>
+        </div>
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+
+
+    </header>
+    <main>
+
+        <!-- Hero section -->
+        <div class="bg-spoon-pale-yellow spoon-inner-shadow">
+
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="w-full my-40">
+                    <h1 class="text-6xl max-w-[50%] text-black font-lovelo uppercase">
+                        Not Just Another Porridge
+                    </h1>
+                    <p class="font-futura text-3xl mt-4">Nutritiously delicious porridge mix</p>
+                    <a class="inline-block bg-spoon-alt-blue hover:brightness-[105%] mt-6 text-2xl font-lovelo uppercase px-12 py-2"
+                        href="#">Shop Now</a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Shop -->
+
+        <div class="bg-spoon-pale-yellow py-12 spoon-inner-shadow">
+
+            <div class="container mx-auto p-4 items-center">
+
+                <p class="font-gelica text-3xl text-center">
+                    Making Breakfast Better.<Br />
+                    Better tasting. Better for you. Better for the planet.
+                </p>
+
+
+                <h2 class="text-3xl font-lovelo uppercase text-center mt-24">Shop</h2>
+
+
+                <div class="flex justify-center mt-12 text-xl">
+                    <button data-toggle-shop="granola" class="bg-white px-6 py-3 font-lovelo uppercase">Granola</button>
+                    <button data-toggle-shop="porridge"
+                        class="bg-spoon-green px-6 py-3 font-lovelo uppercase">Porridge</button>
+                </div>
+
+                <script>
+
+                    // When [data-toggle-shop] button is clicked, show/hide the element with #shop-<data-toggle-shop> id
+
+                    const buttons = document.querySelectorAll('[data-toggle-shop]');
+                    buttons.forEach(button => {
+                        button.addEventListener('click', () => {
+
+
+                            // Hide all .shop elements
+                            const shops = document.querySelectorAll('.shop');
+                            shops.forEach(shop => {
+                                shop.classList.add('hidden');
+                            });
+
+                            // Show the shop element with the id of #shop-<data-toggle-shop>
+                            const shop = document.getElementById('shop-' + button.dataset.toggleShop);
+                            shop.classList.remove('hidden');
+
+
+                            // Ad bg-spoon-white to the clicked button and remove it from the other buttons
+                            buttons.forEach(b => {
+                                b.classList.remove('bg-white');
+                                b.classList.add('bg-spoon-green');
+                            });
+
+                            button.classList.remove('bg-spoon-green');
+                            button.classList.add('bg-white');
+
+                        });
+                    });
+
+                </script>
+
+
+
+                <div class="grid grid-cols-3 gap-48 mt-12 shop" id="shop-granola">
+
+                    <div class="col-span-1">
+                        <img src="https://www.spooncereals.co.uk/cdn/shop/files/homepage-2023-spoon_800x800.jpg?v=1695913240"
+                            alt="Product 1" class="w-full max-w-[80%] mx-auto">
+                        <h3 class="text-xl text-center my-6 font-lovelo uppercase mt-12">Original Granola</h3>
+                        <p class="font-futura text-lg mt-6 text-center">
+                            2* Great Taste Award-winning small batch oat granola Our signature recipe.
+                        </p>
+                    </div>
+
+                    <div class="col-span-1">
+                        <img src="https://www.spooncereals.co.uk/cdn/shop/files/homepage-2023-spoon_800x800.jpg?v=1695913240"
+                            alt="Product 1" class="w-full max-w-[80%] mx-auto">
+                        <h3 class="text-xl text-center my-6 font-lovelo uppercase mt-12">Peanut Butter</h3>
+                        <p class="font-futura text-lg mt-6 text-center">A super peanutty, Deep Roast Peanut Butter oat
+                            granola. Baked with the multi-award-winning ManiLIfe peanut butter.</p>
+                    </div>
+
+                    <div class="col-span-1">
+                        <img src="https://www.spooncereals.co.uk/cdn/shop/files/homepage-2023-spoon_800x800.jpg?v=1695913240"
+                            alt="Product 1" class="w-full max-w-[80%] mx-auto">
+                        <h3 class="text-xl text-center my-6 font-lovelo uppercase mt-12">The Low Sugar One</h3>
+                        <p class="font-futura text-lg mt-6 text-center">Pea Protein boosted, small batch low sugar oat
+                            granola, containing a diverse range of nuts and seeds</p>
+                    </div>
+
+                </div>
+
+
+                <div class="grid grid-cols-3 gap-48 mt-12 shop hidden" id="shop-porridge">
+
+                    <div class="col-span-1">
+                        <img src="https://www.spooncereals.co.uk/cdn/shop/files/georgina-burgess_800x800.jpg?v=1695913995"
+                            alt="Product 1" class="w-full max-w-[80%] mx-auto">
+                        <h3 class="text-xl text-center my-6 font-lovelo uppercase mt-12">Porridge</h3>
+                        <p class="font-futura text-lg mt-6 text-center">
+                            2* Great Taste Award-winning small batch oat granola Our signature recipe.
+                        </p>
+                    </div>
+
+                    <div class="col-span-1">
+                        <img src="https://www.spooncereals.co.uk/cdn/shop/files/georgina-burgess_800x800.jpg?v=1695913995"
+                            alt="Product 1" class="w-full max-w-[80%] mx-auto">
+                        <h3 class="text-xl text-center my-6 font-lovelo uppercase mt-12">Porridge</h3>
+                        <p class="font-futura text-lg mt-6 text-center">A super peanutty, Deep Roast Peanut Butter oat
+                            granola. Baked with the multi-award-winning ManiLIfe peanut butter.</p>
+                    </div>
+
+                    <div class="col-span-1">
+                        <img src="https://www.spooncereals.co.uk/cdn/shop/files/georgina-burgess_800x800.jpg?v=1695913995"
+                            alt="Product 1" class="w-full max-w-[80%] mx-auto">
+                        <h3 class="text-xl text-center my-6 font-lovelo uppercase mt-12">Porridge</h3>
+                        <p class="font-futura text-lg mt-6 text-center">Pea Protein boosted, small batch low sugar oat
+                            granola, containing a diverse range of nuts and seeds</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- list of logos side by side -->
+        <div class="bg-spoon-pale-yellow py-24 spoon-inner-shadow">
+            <div class="container mx-auto p-4 flex justify-between items-center bg-spoon-pale-yellow">
+
+                <div class="flex gap-24 justify-center items-center">
+                    <div class="">
+                        <img src="assets/img/badges/great-taste.avif" class="w-full">
+                    </div>
+                    <div class="">
+                        <img src="assets/img/badges/small-batch.avif" class="w-full">
+                    </div>
+                    <div>
+                        <img src="assets/img/badges/vegan.png" class="w-full">
+                    </div>
+                    <div>
+                        <img src="assets/img/badges/high-fibre.avif" class="w-full">
+                    </div>
+                    <div>
+                        <img src="assets/img/badges/vegan.avif" class="w-full">
+                    </div>
+                    <div>
+                        <img src="assets/img/badges/vegan.avif" class="w-full">
+                    </div>
+                    <div>
+                        <img src="assets/img/badges/Buy_Women_Built.avif" class="w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 3 column testimonials -->
+
+        <div class="bg-spoon-pale-yellow py-24 spoon-inner-shadow">
+            <div class="container mx-auto p-4 flex justify-between items-center">
+
+                <div class="grid grid-cols-3 gap-24">
+
+                    <div class="col-span-1">
+                        <p class="font-lovelo text-xl mt-6 text-center uppercase">
+                            "the <span class="bg-spoon-green">holy grail</span> of granola<br /><br />
+                            I mean. This granola is the real deal. Delicious."
+                        </p>
+                        <p class="text-xl text-center my-6 font-futura mt-12">- Ocado Shopper</p>
+                    </div>
+
+                    <div class="col-span-1">
+                        <p class="font-lovelo text-xl mt-6 text-center uppercase">
+                            “in a crowded and often confusing space it can be really hard to find a granola that
+                            delivers on
+                            <span class="bg-spoon-green">nutrition and flavour</span> to bring together a healthy breakfast choice and this is why I love
+                            spoon
+                            so much."
+                        </p>
+                        <p class="text-xl text-center my-6 font-futura mt-12">-Eve Kalinik, Registered Nutritional
+                            Therapist
+                            - BA Hons, mBANT, AFMCP
+                        </p>
+                    </div>
+
+                    <div class="col-span-1">
+                        <p class="font-lovelo text-xl mt-6 text-center uppercase">
+                            “if you haven’t tried it yet, you need to. It’s by far the <span class="bg-spoon-green">best granola</span> I’ve ever tried and
+                            I
+                            could literally eat it like popcorn!”
+                        </p>
+                        <p class="text-xl text-center my-6 font-futura mt-12">- @Georginaburgess</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- What is section -->
+        <div class="bg-spoon-pale-yellow py-24 spoon-inner-shadow">
+
+            
+                <div class="container mx-auto flex justify-between items-center gap-36">
+                    <div class="w-full flex-1 my-40">
+                        <h1 class="text-6xl text-white font-lovelo uppercase">
+                            When even is spoon?
+                        </h1>
+                        <p class="font-gelica text-xl mt-4">Spoon is a premium, award winning cereal brand that makes
+                            breakfast better using the best ingredients for your health and for the health of the
+                            planet. Spoon was put on earth to <span class="text-spoon-green">challenge</span> the sugar-saturated, mass produced uninspiring
+                            sameness of breakfast.</p>
+                        <a class="inline-block bg-spoon-alt-blue hover:brightness-[105%] mt-6 text-2xl font-lovelo uppercase px-12 py-2"
+                            href="#">Our Cereals</a>
+                    </div>
+                    <div class="flex-2 text-right">
+                        <img
+                            src="https://www.spooncereals.co.uk/cdn/shop/files/Credit-Milly-Fletcher-24-v2_2x_4f31e372-b5f9-4e72-a915-2944cf79a7ee_800x800.jpg?v=1697110822">
+                    </div>
+                </div>
+
+        </div>
+
+        <!-- 4x supermarket logos -->
+
+        <div class="bg-spoon-pale-yellow py-24">
+            <div class="container mx-auto p-4 flex justify-between items-center">
+
+                <div class="grid grid-cols-4 gap-36 items-center">
+
+                    <div class="col-span-1">
+                        <img src="assets/img/supermarkets/waitrose.avif" class="w-full max-w-[250px]">
+                    </div>
+
+                    <div class="col-span-1">
+                        <img src="assets/img/supermarkets/ocado.avif" class="w-full max-w-[250px]">
+                    </div>
+
+                    <div class="col-span-1">
+                        <img src="assets/img/supermarkets/morrisons.avif" class="w-full max-w-[250px]">
+                    </div>
+
+                    <div class="col-span-1">
+                        <img src="assets/img/supermarkets/morrisons.avif" class="w-full max-w-[250px]">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+
+        <div class="container mx-auto p-4 flex justify-between items-center my-5">
+
+            <div class="grid grid-cols-6 gap-4 w-full">
+                <div class="col-span-2">
+
+                    <p class="font-gelica text-xl">
+                        Make your mornings and inbox suck less by signing up to our newsletter.
+                    </p>
+
+                    <div class="bg-gray-200 font-futura mt-3 p-3">Newsletter form</div>
+
+                </div>
+                <div class="cols-span-1"></div>
+                <div class="col-span-1">
+
+                    <h3 class="mb-3 font-gelica text-xl">Explore</h3>
+
+                    <ul class="font-futura text-lg">
+                        <li><a href="#" class="text-gray-700 hover:text-spoon-green">Shop</a></li>
+                        <li><a href="#" class="text-gray-700 hover:text-spoon-green">Recipes</a></li>
+                        <li><a href="#" class="text-gray-700 hover:text-spoon-green">Planet</a></li>
+                        <li><a href="#" class="text-gray-700 hover:text-spoon-green">Blog</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-span-1">
+
+                    <h3 class="mb-3 font-gelica text-xl">Contact Us</h3>
+
+                    <ul class="font-futura text-lg">
+                        <li><a href="mailto:spoon@spooncereals.co.uk"
+                                class="text-gray-700 hover:text-spoon-green">spoon@spooncereals.co.uk</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-span-1">
+
+                    <h3 class="mb-3 font-gelica text-xl">Follow</h3>
+
+                    <ul class="flex space-x-2 text-3xl">
+                        <li>
+                            <a class="hover:text-spoon-green" href="https://www.instagram.com" target="_blank">
+                                <svg class="size-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="hover:text-spoon-green" href="https://www.facebook.com" target="_blank">
+                                <svg class="size-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="assets/js/build/scripts.js"></script>
+</body>
+
+</html>

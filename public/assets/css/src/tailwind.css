@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Gelica';
+    src: url('../../../assets/fonts/Gelica-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura-Medium';
+    src: url('../../../assets/fonts/Futura-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+.font-gelica {
+    font-family: "Gelica";
+}
+
+.font-futura {
+    font-family: 'Futura-Medium', sans-serif;
+}
+
+@font-face {
+    font-family: 'Lovelo Black';
+    src: url('../../../assets/fonts/lovelo_black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-lovelo {
+    font-family: 'Lovelo Black', sans-serif;
+}
+
+.spoon-inner-shadow {
+    position: relative;
+  }
+  
+  .spoon-inner-shadow::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10px; /* Adjust for stronger effect */
+    background: radial-gradient(ellipse at center bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 80%);
+    pointer-events: none;
+  }
+  

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoon Cereals - Trade</title>
+
+    <link id="stylesheet" rel="stylesheet" href="assets/css/dist/build.css">
+    <script>
+        const stylesheet = document.getElementById('stylesheet');
+        // add a random query string to the stylesheet to force a reload
+        stylesheet.href = stylesheet.href + '?v=' + Date.now();
+    </script>
+
+</head>
+
+<body>
+    <header>
+
+
+        <div class="container mx-auto p-4 flex justify-between items-center my-5">
+            <div class="text-lg font-bold">
+                <a href="index.html">
+                    <img src="assets/img/logo.png" alt="Spoon Cereals" class="h-24">
+                </a>
+            </div>
+            <nav class="hidden md:flex space-x-6 font-futura text-2xl">
+                <a href="https://www.amazon.co.uk/stores/SpoonCereals/page/B0096582-0CF7-4236-933F-EF68FB9410D4?ref_=ast_bln"
+                    class="text-gray-700 hover:text-spoon-green">Shop</a>
+                <a href="about.html" class="text-gray-700 hover:text-spoon-green">About</a>
+                <a href="recipes.html" class="text-gray-700 hover:text-spoon-green">Recipes</a>
+                <a href="planet.html" class="text-gray-700 hover:text-spoon-green">Planet</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="https://www.amazon.co.uk/stores/SpoonCereals/page/B0096582-0CF7-4236-933F-EF68FB9410D4?ref_=ast_bln"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Shop</a>
+            <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">About</a>
+            <a href="recipes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Recipes</a>
+            <a href="planet.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Planet</a>
+        </div>
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+
+
+    </header>
+    <main>
+
+
+
+
+        <div class="font-futura container mx-auto p-4 spoon-inner-shadow py-24" id="privacy-policy">
+
+            <h1 class="text-2xl font-lovelo mb-12">Privacy Policy</h1>
+
+            <h3>Our contact details</h3>
+            <p>Name: Spoon Cereals</p>
+            <p>Address: Studio 5, 305A Goldhawk Road</p>
+            <p>E-mail: spoon@spooncereals.co.uk</p>
+            <p> </p>
+            <p><strong>All of the personal information we process is provided to us directly by you. This information
+                    may include:</strong></p>
+            <ul>
+                <li>Information you provide to us when you use our Site (e.g. your name, contact details, gender,
+                    product reviews, and any information which you add to your account profile);</li>
+                <li>Transaction and billing information, if you make any purchases from us or using our Site (e.g.
+                    credit/debit card details and delivery information);</li>
+                <li>Records of your interactions with us (e.g. if you contact our customer service team, interact with
+                    us on social media);</li>
+                <li>Information you provide us when you enter a competition or participate in a survey;</li>
+                <li>Information collected automatically, using cookies and other tracking technologies (e.g. which pages
+                    you viewed and whether you clicked on a link in one of our email updates). We may also collect
+                    information about the device you use to access our Site; and</li>
+                <li>Other information necessary to provide the Site, for example we may access your location if you give
+                    us your consent.</li>
+            </ul>
+            <p><strong>What do we use this personal data for?</strong></p>
+            <p>Depending on how you use our Site, your interactions with us, and the permissions you give us, the
+                purposes for which we use your personal data include:</p>
+            <ul>
+                <li>To fulfil your order and maintain your online account.</li>
+                <li>To manage and respond to any queries or complaints to our customer service team.</li>
+                <li>To personalise the Site to you and show you content we think you will be most interested in, based
+                    on your account information, your purchase history and your browsing activity.</li>
+                <li>To improve and maintain the Site, and monitor its usage.</li>
+                <li>For market research, e.g. we may contact you for feedback about our products.</li>
+                <li>To send you marketing messages and show you targeted advertising, where we have your consent or are
+                    otherwise permitted to do so.</li>
+                <li>To fulfil delivery of samples and/or prizes and pass this info on to brands we partner with on the
+                    giveaway </li>
+                <li>For security purposes, to investigate fraud and where necessary to protect ourselves and third
+                    parties.</li>
+                <li>To comply with our legal and regulatory obligations.</li>
+            </ul>
+            <p><strong>Under the General Data Protection Regulation (GDPR), the lawful bases we rely on for processing
+                    this information are:</strong></p>
+            <ul>
+                <li>Your consent. You are able to remove your consent at any time. You can do this by contacting
+                    spoon@spooncereals.co.uk</li>
+                <li>We have a contractual obligation.</li>
+                <li>We have a legal obligation.</li>
+                <li>We have a vital interest.</li>
+                <li>We need it to perform a public task.</li>
+                <li>We have a legitimate interest.</li>
+            </ul>
+            <meta charset="utf-8">
+            <p><strong>Marketing</strong></p>
+            <p>We love to communicate with our customers and so, depending on your marketing preferences, we may use
+                your personal data to send you marketing messages by email, phone or post. Some of these messages may be
+                tailored to you, based on your previous browsing or purchase activity, and other information we hold
+                about you.</p>
+            <p>If you no longer want to receive marketing communications from us (or would like to opt back in!), you
+                can change your preferences at any time by contacting us at spoon@spooncereals.co.uk, clicking on the
+                ‘unsubscribe’ link in any email, or updating your settings in your account. If you unsubscribe from
+                marketing, please note we may still contact you with service messages from time to time (e.g. order and
+                delivery confirmations, and information about your legal rights).</p>
+            <p>You may also see ads for our site on third party websites, including on social media. These ads may be
+                tailored to you using cookies (which track your web activity, so enable us to serve ads to customers who
+                have visited our Site). Where you see an ad on social media, this may because we have engaged the social
+                network to show ads to our customers, or users who match the demographic profile of our customers. In
+                some cases, this may involve sharing your email address with the social network. If you no longer want
+                to see tailored ads you can change your cookie and privacy settings on your browser and these third
+                party websites.</p>
+            <p><strong>How we store your personal information </strong></p>
+            <p>Your information is securely stored via our e-commerce and marketing platforms, Shopify and Klaviyo. We
+                retain personal information for as long as necessary, unless you opt-out before then.</p>
+            <p><strong>Your data protection rights</strong></p>
+            <p>Under data protection law, you have rights including:</p>
+            <p>Your right of access - You have the right to ask us for copies of your personal information.</p>
+            <p>Your right to rectification - You have the right to ask us to rectify personal information you think is
+                inaccurate. You also have the right to ask us to complete information you think is incomplete.</p>
+            <p>Your right to erasure - You have the right to ask us to erase your personal information in certain
+                circumstances.</p>
+            <p>Your right to restriction of processing - You have the right to ask us to restrict the processing of your
+                personal information in certain circumstances.</p>
+            <p>Your right to object to processing - You have the the right to object to the processing of your personal
+                information in certain circumstances.</p>
+            <p>Your right to data portability - You have the right to ask that we transfer the personal information you
+                gave us to another organisation, or to you, in certain circumstances.</p>
+            <p>You are not required to pay any charge for exercising your rights. If you make a request, we have one
+                month to respond to you.</p>
+            <p>Please contact us at <a href="mailto:spoon@spooncereals.co.uk">spoon@spooncereals.co.uk</a> if you wish
+                to make a request.</p>
+            <p><strong>How to complain</strong></p>
+            <p>If you have any concerns about our use of your personal information, you can make a complaint to us at
+                spoon@spooncereals.co.uk</p>
+            <p>You can also complain to the ICO if you are unhappy with how we have used your data.</p>
+            <p>The ICO’s address: </p>
+            <p>Information Commissioner’s Office</p>
+            <p>Wycliffe House</p>
+            <p>Water Lane</p>
+            <p>Wilmslow</p>
+            <p>Cheshire</p>
+            <p>SK9 5AF</p>
+            <p> </p>
+            <p>Helpline number: 0303 123 1113</p>
+            <p>ICO website: <a href="https://www.ico.org.uk">https://www.ico.org.uk</a></p>
+
+
+
+        </div>
+
+        <style>
+            #privacy-policy p {
+                margin-top: 1em;
+            }
+
+            #privacy-policy h3 {
+                font-family: "Lovelo Black";
+            }
+
+            #privacy-policy strong {
+                font-family: "Lovelo Black";
+            }
+        </style>
+
+
+
+    </main>
+    <footer>
+
+        <div class="container mx-auto p-4 flex justify-between items-center my-5">
+
+            <div class="grid grid-cols-6 gap-4 w-full">
+                <div class="col-span-2">
+
+                    <p class="font-gelica text-xl">
+                        Make your mornings and inbox suck less by signing up to our newsletter.
+                    </p>
+
+                    <div class="bg-gray-200 font-futura mt-3 p-3">Newsletter form</div>
+
+                </div>
+                <div class="cols-span-1"></div>
+                <div class="col-span-1">
+
+                    <h3 class="mb-3 font-gelica text-xl">Explore</h3>
+
+                    <ul class="font-futura text-lg">
+                        <li><a target="_blank"
+                                href="https://www.amazon.co.uk/stores/SpoonCereals/page/B0096582-0CF7-4236-933F-EF68FB9410D4?ref_=ast_bln"
+                                class="text-gray-700 hover:text-spoon-green">Shop</a></li>
+                        <li><a href="faqs.html" class="text-gray-700 hover:text-spoon-green">FAQ</a></li>
+                        <li><a href="trade.html" class="text-gray-700 hover:text-spoon-green">Trade</a></li>
+                        <li><a href="privacy.html" class="text-gray-700 hover:text-spoon-green">Privacy Policy</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-span-1">
+
+                    <h3 class="mb-3 font-gelica text-xl">Contact Us</h3>
+
+                    <ul class="font-futura text-lg">
+                        <li><a href="mailto:spoon@spooncereals.co.uk"
+                                class="text-gray-700 hover:text-spoon-green">spoon@spooncereals.co.uk</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-span-1">
+
+                    <h3 class="mb-3 font-gelica text-xl">Follow</h3>
+
+                    <ul class="flex space-x-2 text-3xl">
+                        <li>
+                            <a class="hover:text-spoon-green" href="https://www.instagram.com" target="_blank">
+                                <svg class="size-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="hover:text-spoon-green" href="https://www.facebook.com" target="_blank">
+                                <svg class="size-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="assets/js/build/scripts.js"></script>
+</body>
+
+</html>

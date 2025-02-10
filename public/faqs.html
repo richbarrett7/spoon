@@ -7,7 +7,7 @@
 
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link id="stylesheet" rel="stylesheet" href="assets/css/dist/build.css?8c7209eb3c">
+<link id="stylesheet" rel="stylesheet" href="assets/css/dist/build.css?8ed9b983fb">
 
 </head>
 
@@ -121,7 +121,7 @@
             </ul>
 
         </div>
-        <div class="col-span-1">
+        <div class="col-span-1 flex flex-col items-stretch">
 
             <h3 class="mb-3 font-gelica text-xl">Follow</h3>
 
@@ -143,6 +143,14 @@
                     </a>
                 </li>
             </ul>
+
+
+            <div class="mt-auto text-gray-400 font-futura text-xs">
+                &copy; <span js-year></span> Spoon Cereals
+                <script>
+                    document.querySelector('[js-year]').textContent = new Date().getFullYear();
+                </script>
+            </div>
 
 
         </div>

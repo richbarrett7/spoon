@@ -3,7 +3,7 @@ module.exports = {
   content: {
     relative: true,
     files: [
-      './public/**/*.html',
+      './src/**/*.html',
       './public/assets/js/src/**/*.js',
     ]
   },

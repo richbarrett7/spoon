@@ -1,0 +1,38 @@
+<div class="container mx-auto p-4 flex justify-between items-center my-5">
+    <div class="text-lg font-bold">
+        <a href="index.html">
+            <img src="assets/img/logo.png" alt="Spoon Cereals" class="h-24">
+        </a>
+    </div>
+    <nav class="hidden md:flex space-x-6 font-futura text-2xl">
+        <a href="https://www.amazon.co.uk/stores/SpoonCereals/page/B0096582-0CF7-4236-933F-EF68FB9410D4?ref_=ast_bln"
+            class="text-gray-700 hover:text-spoon-green">Shop</a>
+        <a href="about.html" class="text-gray-700 hover:text-spoon-green">About</a>
+        <a href="recipes.html" class="text-gray-700 hover:text-spoon-green">Recipes</a>
+        <a href="planet.html" class="text-gray-700 hover:text-spoon-green">Planet</a>
+    </nav>
+    <div class="md:hidden">
+        <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden">
+    <a href="https://www.amazon.co.uk/stores/SpoonCereals/page/B0096582-0CF7-4236-933F-EF68FB9410D4?ref_=ast_bln"
+        class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Shop</a>
+    <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">About</a>
+    <a href="recipes.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Recipes</a>
+    <a href="planet.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Planet</a>
+</div>
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>

@@ -8,7 +8,7 @@
 
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link id="stylesheet" rel="stylesheet" href="assets/css/dist/build.css?6573dbb716">
+<link id="stylesheet" rel="stylesheet" href="assets/css/dist/build.css?d78d00efda">
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icon/favicon-16x16.png">
@@ -80,15 +80,17 @@
     <main>
 
         <!-- Hero section -->
-        <div class="bg-spoon-pale-yellow spoon-inner-shadow px-4 bg-cover bg-[url(../../../assets/img/artwork/Homepage-Banner-Porridge.jpg)]">
+        <div class="bg-spoon-pale-yellow spoon-inner-shadow">
 
-            <div class="container mx-auto flex justify-between items-center">
+            <img src="assets/img/artwork/Homepage-Banner-Porridge.jpg" class="w-full opacity-40 lg:opacity-100 h-full object-cover absolute z-10">
+
+            <div class="container mx-auto flex justify-between items-center z-20 relative px-4">
                 <div class="w-full my-40 mt-12 lg:mt-40">
                     <h1 class="text-6xl max-w-[50%] text-black font-lovelo uppercase">
                         Not Just Another Porridge
                     </h1>
                     <p class="font-futura text-3xl mt-4">Nutritiously delicious porridge mix</p>
-                    <a class="inline-block bg-spoon-alt-blue hover:brightness-[105%] mt-6 text-2xl font-lovelo uppercase px-12 py-2"
+                    <a class="inline-block bg-spoon-alt-blue hover:bg-white mt-6 text-2xl font-lovelo uppercase px-12 py-2 pt-3"
                         href="#">Shop Now</a>
                 </div>
             </div>
@@ -112,9 +114,9 @@
 
 
                 <div class="flex justify-center mt-12 text-xl">
-                    <button data-toggle-shop="granola" class="bg-white px-6 py-3 font-lovelo uppercase">Granola</button>
+                    <button data-toggle-shop="granola" class="bg-white px-6 py-3 pt-4 font-lovelo uppercase transition-transform hover:-translate-y-[5px]">Granola</button>
                     <button data-toggle-shop="porridge"
-                        class="bg-spoon-green px-6 py-3 font-lovelo uppercase">Porridge</button>
+                        class="bg-spoon-green px-6 py-3 pt-4 font-lovelo uppercase transition-transform hover:-translate-y-[5px] ">Porridge</button>
                 </div>
 
                 <script>
@@ -155,44 +157,57 @@
 
                 <div class="grid grid-cols-1 lg:grid-cols-4 gap-24 lg:gap-24 mt-12 shop" id="shop-granola">
 
-                    <div class="col-span-1 bg-red-400">
+                    <div class="col-span-1 text-center flex flex-col items-center gap-8 justify-start">
                         <img src="assets/img/products/cinnamon-pecan.jpg"
                             alt="Product 1" class="w-full max-w-[80%] mx-auto">
-                        <h3 class="text-xl text-center my-6 font-lovelo uppercase mt-12">Cinnamon &amp; Pecan</h3>
-                        <p class="font-futura text-lg mt-6 text-center">
+                        <h3 class="text-xl text-center font-lovelo uppercase">Cinnamon &amp; Pecan</h3>
+                        <p class="font-futura text-lg text-center">
                             2* Great Taste Award-winning small batch oat granola Our signature recipe.
                         </p>
 
-                        <a class="inline-block bg-spoon-alt-blue hover:brightness-[105%] mt-6 text-lg font-lovelo uppercase px-6 mx-auto py-2"
-                        target="_blank" href="https://www.amazon.co.uk/stores/SpoonCereals/page/B0096582-0CF7-4236-933F-EF68FB9410D4?ref_=ast_bln">Buy Now</a>
+                        <a class="inline-block bg-spoon-alt-blue hover:bg-white mt-auto font-lovelo uppercase px-6 py-2 pt-3"
+                        target="_blank" href="https://www.amazon.co.uk/Spoon-Cereals-Healthy-Cinnamon-Granola/dp/B08CV222YJ">Buy Now</a>
 
                     </div>
 
 
-                    <div class="col-span-1">
+                    <div class="col-span-1 text-center flex flex-col items-center gap-8 justify-start">
                         <img src="assets/img/products/apple-almond-butter.jpg"
                             alt="Product 1" class="w-full max-w-[80%] mx-auto">
-                        <h3 class="text-xl text-center my-6 font-lovelo uppercase mt-12">Apple &amp; Almond Butter</h3>
-                        <p class="font-futura text-lg mt-6 text-center">
+                        <h3 class="text-xl text-center font-lovelo uppercase">Apple &amp; Almond Butter</h3>
+                        <p class="font-futura text-lg text-center">
                             2* Great Taste Award-winning small batch oat granola Our signature recipe.
                         </p>
+
+                        <a class="inline-block bg-spoon-alt-blue hover:bg-white mt-auto font-lovelo uppercase px-6 py-2 pt-3"
+                        target="_blank" href="https://www.amazon.co.uk/Spoon-Cereals-Healthy-Almond-Granola/dp/B08CV2P9NB">Buy Now</a>
+
                     </div>
 
 
-                    <div class="col-span-1">
+                    <div class="col-span-1 text-center flex flex-col items-center gap-8 justify-start">
                         <img src="assets/img/products/peanut-butter.jpg"
                             alt="Product 1" class="w-full max-w-[80%] mx-auto">
-                        <h3 class="text-xl text-center my-6 font-lovelo uppercase mt-12">Peanut Butter</h3>
-                        <p class="font-futura text-lg mt-6 text-center">A super peanutty, Deep Roast Peanut Butter oat
-                            granola. Baked with the multi-award-winning ManiLIfe peanut butter.</p>
+                        <h3 class="text-xl text-center font-lovelo uppercase">Peanut Butter</h3>
+                        <p class="font-futura text-lg text-center">A super peanutty, Deep Roast Peanut Butter oat
+                            granola. Baked with the multi-award-winning ManiLife peanut butter.</p>
+
+                            <a class="inline-block bg-spoon-alt-blue hover:bg-white mt-auto font-lovelo uppercase px-6 py-2 pt-3"
+                            target="_blank" href="https://www.amazon.co.uk/Spoon-ManiLife-Peanut-Butter-Granola/dp/B0DKJRSG5L">Buy Now</a>
+
+                            
                     </div>
 
-                    <div class="col-span-1">
+                    <div class="col-span-1 text-center flex flex-col items-center gap-8 justify-start">
                         <img src="assets/img/products/low-sugar-one.jpg"
                             alt="Product 1" class="w-full max-w-[80%] mx-auto">
-                        <h3 class="text-xl text-center my-6 font-lovelo uppercase mt-12">The Low Sugar One</h3>
-                        <p class="font-futura text-lg mt-6 text-center">Pea Protein boosted, small batch low sugar oat
+                        <h3 class="text-xl text-center font-lovelo uppercase">The Low Sugar One</h3>
+                        <p class="font-futura text-lg text-center">Pea Protein boosted, small batch low sugar oat
                             granola, containing a diverse range of nuts and seeds.</p>
+
+                            <a class="inline-block bg-spoon-alt-blue hover:bg-white mt-auto font-lovelo uppercase px-6 py-2 pt-3"
+                            target="_blank" href="https://www.amazon.co.uk/Spoon-Cereal-Low-Sugar-Granola/dp/B0CK8BPQ1K">Buy Now</a>
+    
                     </div>
 
                 </div>
@@ -201,17 +216,22 @@
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-24 lg:gap-48 mt-12 shop hidden" id="shop-porridge">
 
                     <div class="col-span-1"></div>
-                    <div class="col-span-1">
+                    <div class="col-span-1 text-center flex flex-col items-center gap-8 justify-start">
                         <img src="assets/img/products/super-oats.jpg"
                             alt="Product 1" class="w-full max-w-[80%] mx-auto">
-                        <h3 class="text-xl text-center my-6 font-lovelo uppercase mt-12">Super Oats Porridge</h3>
-                        <p class="font-futura text-lg mt-6 text-center">
+                        <h3 class="text-xl text-center font-lovelo uppercase">Super Oats Porridge</h3>
+                        <p class="font-futura text-lg text-center">
                             2* Great Taste Award-winning small batch oat granola Our signature recipe.
                         </p>
+
+                        <a class="inline-block bg-spoon-alt-blue hover:bg-white mt-auto font-lovelo uppercase px-6 py-2"
+                        target="_blank" href="https://www.amazon.co.uk/Spoon-Cereals-Super-Oats-Porridge/dp/B0DTQ9Y24Q">Buy Now</a>
+
+
                     </div>
 
                     
-
+                    
                 </div>
 
 
@@ -310,7 +330,7 @@
                             breakfast better using the best ingredients for your health and for the health of the
                             planet. Spoon was put on earth to <span class="text-spoon-green">challenge</span> the sugar-saturated, mass produced uninspiring
                             sameness of breakfast.</p>
-                        <a class="inline-block bg-spoon-alt-blue hover:brightness-[105%] mt-6 text-3xl font-lovelo uppercase px-12 py-3"
+                        <a class="inline-block bg-spoon-alt-blue hover:bg-white mt-6 text-3xl font-lovelo uppercase px-12 py-3 pt-4"
                             target="_blank" href="https://www.amazon.co.uk/stores/SpoonCereals/page/B0096582-0CF7-4236-933F-EF68FB9410D4?ref_=ast_bln">Our Cereals</a>
                     </div>
                     <div class="flex-1 text-right">

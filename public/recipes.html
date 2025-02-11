@@ -10,7 +10,7 @@
     
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link id="stylesheet" rel="stylesheet" href="assets/css/dist/build.css?d66229e017">
+<link id="stylesheet" rel="stylesheet" href="assets/css/dist/build.css?2b2efe0d27">
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icon/favicon-16x16.png">
@@ -146,13 +146,13 @@
                             
                     </div>
 
-                    <div class="col-span-1">
+                    <div class="col-span-1 flex flex-col items-start">
 
                         <div class="w-full h-[300px] bg-white bg-[url(../../../assets/img/recipes/apple-oats.jpg)] bg-cover bg-center"></div>
 
                         <p class="font-lovelo text-xl mt-6">Apple Oats</p>
 
-                        <a class="inline-block bg-spoon-dark-blue hover:brightness-[105%] mt-2 text-sm font-lovelo uppercase px-8 py-2"
+                        <a class="inline-block bg-spoon-dark-blue hover:brightness-[105%] text-sm font-lovelo uppercase px-8 py-2 mt-auto"
                         href="https://www.instagram.com/p/DAc24Nxocl4/?img_index=1" target="_blank">Try It Now</a>
                             
                     </div>
@@ -194,6 +194,17 @@
 
             <div class="bg-gray-200 font-futura mt-3 p-3">Newsletter form</div>
 
+
+
+            <div class="mt-6 text-gray-400 font-futura text-xs">
+                &copy; <span js-year></span> Spoon Cereals. Website by <a target="_blank" href="https://ribh.co.uk">RIBH</a>.
+                <script>
+                    document.querySelector('[js-year]').textContent = new Date().getFullYear();
+                </script>
+            </div>
+
+
+
         </div>
         <div class="col-span-1"></div>
         <div class="col-span-1">
@@ -219,7 +230,7 @@
             </ul>
 
         </div>
-        <div class="col-span-1 flex flex-col items-stretch">
+        <div class="col-span-1">
 
             <h3 class="mb-3 font-gelica text-xl">Follow</h3>
 
@@ -241,15 +252,6 @@
                     </a>
                 </li>
             </ul>
-
-
-            <div class="lg:mt-auto mt-6 text-gray-400 font-futura text-xs">
-                &copy; <span js-year></span> Spoon Cereals
-                <script>
-                    document.querySelector('[js-year]').textContent = new Date().getFullYear();
-                </script>
-            </div>
-
 
         </div>
     </div>

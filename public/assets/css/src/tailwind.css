@@ -36,6 +36,19 @@
     font-family: 'Lovelo Black', sans-serif;
 }
 
+/* FuturaPTDemi.otf */
+
+@font-face {
+    font-family: 'FuturaMedium';
+    src: url('../../../assets/fonts/Futura-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-futura strong, .font-futura.font-bold {
+    font-family: 'FuturaMedium', sans-serif;
+}
+
 .spoon-inner-shadow {
     position: relative;
   }

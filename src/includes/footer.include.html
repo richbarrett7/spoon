@@ -26,7 +26,7 @@
             
             <div style="clear:both;"></div>
 
-            <div class="mt-6 text-gray-400 font-futura text-xs block">
+            <div class="mt-6 text-gray-400 font-futura text-xs block hidden lg:block">
                 &copy; <span js-year></span> Spoon Cereals. Website by <a target="_blank" href="https://ribh.co.uk">RIBH</a>.
                 <script>
                     document.querySelector('[js-year]').textContent = new Date().getFullYear();
@@ -86,4 +86,12 @@
         </div>
     </div>
 
+
+</div>
+
+<div class="mt-6 text-gray-400 font-futura text-xs block lg:hidden px-4 mb-4">
+    &copy; <span js-year></span> Spoon Cereals. Website by <a target="_blank" href="https://ribh.co.uk">RIBH</a>.
+    <script>
+        document.querySelector('[js-year]').textContent = new Date().getFullYear();
+    </script>
 </div>

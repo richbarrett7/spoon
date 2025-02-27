@@ -7,7 +7,7 @@
 
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link id="stylesheet" rel="stylesheet" href="assets/css/dist/build.css?4ceb7dbee3">
+<link id="stylesheet" rel="stylesheet" href="assets/css/dist/build.css?0241c7e3f5">
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icon/favicon-16x16.png">
@@ -30,6 +30,8 @@
 
   gtag('config', 'G-23QKVJZ80T');
 </script> 
+
+<script src="https://static.klaviyo.com/onsite/js/X3FaRF/klaviyo.js"></script>
 
 </head>
 
@@ -208,15 +210,30 @@
     <div class="grid grid-cols-1 lg:grid-cols-6 gap-4 w-full">
         <div class="col-span-1 lg:col-span-2">
 
-            <p class="font-gelica text-xl">
+            <p class="font-gelica text-xl mb-2">
                 Make your mornings and inbox suck less by signing up to our newsletter.
             </p>
 
-            <div class="bg-gray-200 font-futura mt-3 p-3">Newsletter form</div>
+            <div class="w-full block">
+                <div class="klaviyo-form-Vss7xt"></div>
+            </div>  
 
+            <style>
+                .klaviyo-form-Vss7xt input[name=email] {
+                    border:0 !important;
+                    border-bottom: solid 2px #000 !important;
+                    outline: none !important; 
+                }
 
+                .klaviyo-form-Vss7xt input[type="button"] {
+                    background-color: #000 !important;
+                    margin-left: 10px !important;
+                }
+            </style>
+            
+            <div style="clear:both;"></div>
 
-            <div class="mt-6 text-gray-400 font-futura text-xs">
+            <div class="mt-6 text-gray-400 font-futura text-xs block">
                 &copy; <span js-year></span> Spoon Cereals. Website by <a target="_blank" href="https://ribh.co.uk">RIBH</a>.
                 <script>
                     document.querySelector('[js-year]').textContent = new Date().getFullYear();
